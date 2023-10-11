@@ -7,16 +7,27 @@ import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var namedEditText: EditText
+    private lateinit var sayHelloBtn: Button
+    private lateinit var sayHelloText: TextView
+
+    private fun initComponents(){
+        // manggil component berdasarkan id
+        namedEditText = findViewById(R.id.nameEditText)
+        sayHelloBtn = findViewById(R.id.sayHelloButton)
+        sayHelloText = findViewById(R.id.sayHelloText)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hello_world)
 
-        val namedEditText: EditText = findViewById(R.id.nameEditText)
-        val sayHelloBtn: Button = findViewById(R.id.sayHelloButton)
-        val sayHelloText: TextView = findViewById(R.id.sayHelloText)
+        initComponents()
 
         sayHelloText.text = "Hello world"
 
+
+        // lambda action listener
         sayHelloBtn.setOnClickListener {
             val name: String = namedEditText.text.toString()
 
