@@ -2,6 +2,7 @@ package com.example.android_dasar
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         // lambda action listener
         sayHelloBtn.setOnClickListener {
+            Log.i("BTN", "click button")
             val name: String = namedEditText.text.toString()
 
             sayHelloText.text = "Hello ${name}"
