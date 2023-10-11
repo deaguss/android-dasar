@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         initComponents()
 
-        sayHelloText.text = "Hello world"
+        // get resource di main activity
+        sayHelloText.text = resources.getText(R.string.app_name)
 
 
         // lambda action listener
