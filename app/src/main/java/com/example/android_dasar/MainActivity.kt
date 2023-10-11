@@ -43,6 +43,15 @@ class MainActivity : AppCompatActivity() {
             val allDataText = itemNames.joinToString(", ") // Menggabungkan semua item dalam satu string dengan koma sebagai pemisah
             textAllData.text = allDataText
 
+
+            // get other resource
+            Log.i("valueResource", resources.getInteger(R.integer.int_name).toString())
+            Log.i("valueResource", resources.getBoolean(R.bool.isPaid).toString())
+            Log.i("valueResource", resources.getIntArray(R.array.int_array).joinToString(", "))
+            Log.i("valueResource", resources.getColor(R.color.background_black, theme).toString())
+
+            // set color btn
+            sayHelloBtn.setBackgroundColor(resources.getColor(R.color.background_black, theme))
         }
     }
 }
