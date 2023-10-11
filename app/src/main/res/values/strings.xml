@@ -2,4 +2,9 @@
     <string name="app_name">android-dasar</string>
     <string name="btn_name">Save changes</string>
     <string name="say_hello_text">Hello %1$s</string>
+    <string-array name="item_name">
+        <item>arthur</item>
+        <item>agus</item>
+        <item>nevermind</item>
+    </string-array>
 </resources>
