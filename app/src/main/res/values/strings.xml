@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">android-dasar</string>
     <string name="btn_name">Save changes</string>
+    <string name="say_hello_text">Hello %1$s</string>
 </resources>

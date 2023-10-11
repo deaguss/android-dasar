@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             Log.i("BTN", "click button")
             val name: String = namedEditText.text.toString()
 
-            sayHelloText.text = "Hello ${name}"
+            sayHelloText.text = resources.getString(R.string.say_hello_text, name)
 
         }
     }
