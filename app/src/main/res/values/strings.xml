@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">android-dasar</string>
+    <string name="btn_name">Save changes</string>
 </resources>
