@@ -1,5 +1,7 @@
 package com.example.android_dasar
 
+import android.content.pm.PackageManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -21,11 +23,29 @@ class MainActivity : AppCompatActivity() {
         sayHelloText = findViewById(R.id.sayHelloText)
         textAllData = findViewById(R.id.allData)
     }
+
+    private fun checkFingerPrint(){
+        // check fitur finger print yang bersifat opsional
+        if(packageManager.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)){
+            Log.i("FEATURE","finger print ada")
+        }else {
+            Log.w("FEATURE", "finger print tidak ada")
+        }
+    }
+
+    private fun checkPlatformVersion(){
+        // check platform version
+        if(Build.VERSION.SDK_INT < Build.VERSION_CODES.S){
+            Log.i("VERSION", "disabled feature")
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hello_world)
 
         initComponents()
+        checkFingerPrint()
+        checkPlatformVersion()
 
         // get resource di main activity
         sayHelloText.text = resources.getText(R.string.app_name)
