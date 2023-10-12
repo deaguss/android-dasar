@@ -33,6 +33,15 @@ class MainActivity : AppCompatActivity() {
 
         // lambda action listener
         sayHelloBtn.setOnClickListener {
+
+            // get json data menggunakan asserts manager
+            val json = assets.open("data.json").bufferedReader().use { it.readText() }
+            Log.i("ASSERTS", json)
+
+            // get json data menggunakan raw
+            val data = resources.openRawResource(R.raw.data).bufferedReader().use { it.readText() }
+            Log.i("RAW", data)
+
             Log.i("BTN", "click button")
             val name: String = namedEditText.text.toString()
 
