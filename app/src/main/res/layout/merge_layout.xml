@@ -10,7 +10,9 @@
         android:id="@+id/sayHelloButton"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/btn_name" />
+        android:text="@string/btn_name"
+        android:textColor="@color/color_bg"
+        />
 
     <TextView
         android:id="@+id/sayHelloText"
