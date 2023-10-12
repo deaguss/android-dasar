@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    // other resource value
+    <integer name="int_name">100</integer>
+    <integer-array name="int_array">
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+    </integer-array>
+    <bool name="isPaid">true</bool>
+    <color name="background_black">#000000</color>
+</resources>
